@@ -27,6 +27,30 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
-    
+    int num = in.nextInt();
+    int ModeCount = 0;
+    int ModeValue = 0;
+    int[] values = new int[num];
+
+    for (int i = 0; i < num; i++){
+      int value = in.nextInt();
+      values[i] = value;
+    }
+
+    for (int e = 0; e < num; e++){
+      int count = 0;
+      for (int n = 0; n < num; n++){
+        if (values[n] == values[e]){
+          count++;
+        }
+      }
+
+      if (count > ModeCount){
+        ModeValue = values[e];
+        ModeCount = count;
+      }
+    }
+
+    System.out.println(ModeValue);
   }
 }
