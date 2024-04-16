@@ -14,6 +14,6 @@ public class Question2
     double height = in.nextDouble();
     double weight = in.nextDouble();
 
-    System.out.println(weight / (height * height));
+    System.out.print(weight / (height * height));
   }
 }
